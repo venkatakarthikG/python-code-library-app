@@ -3,7 +3,7 @@ services:
   db:
     image: venkatakarthikgolla/devops:dbimg
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "3306:3306"
     networks:
@@ -12,7 +12,7 @@ services:
   auth_service:
     image: venkatakarthikgolla/devops:authimg
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5001:5001"
     networks:
@@ -24,7 +24,7 @@ services:
   book_service:
     image: venkatakarthikgolla/devops:bookimg
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5002:5002"
     networks:
@@ -34,7 +34,7 @@ services:
   borrow_service:
     image: venkatakarthikgolla/devops:borrowimg
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5003:5003"
     networks:
@@ -45,7 +45,7 @@ services:
   frontend:
     image: venkatakarthikgolla/devops:frontendimg
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5000:5000"
     networks:
